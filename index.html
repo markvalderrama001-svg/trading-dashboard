@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Trading Intelligence</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>▚</text></svg>" />
+  </head>
+  <body>
+    <header id="topbar">
+      <div class="brand">
+        <span class="brand-mark">▚</span>
+        <span class="brand-name">TRADING INTELLIGENCE</span>
+        <span class="brand-ro" title="This dashboard can only issue read-only tool calls.">READ-ONLY</span>
+      </div>
+      <div class="topbar-right">
+        <span id="clock" class="clock"></span>
+        <button id="refresh-all" type="button">refresh all</button>
+      </div>
+    </header>
+    <main id="grid"></main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

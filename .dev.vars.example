@@ -1,0 +1,14 @@
+# Local development secrets for `wrangler pages dev`.
+# Copy to `.dev.vars` and fill in. `.dev.vars` is gitignored. Never commit it.
+#
+# These are read ONLY by the Pages Functions in functions/. They are never
+# bundled into the client. Do not prefix them with VITE_, which would inline
+# them into the browser bundle and publish them to every visitor.
+
+# Your MCP server endpoints (Cloudflare Workers or any Streamable HTTP MCP server).
+TASTYTRADE_MCP_URL="https://tastytrade-mcp.<your-subdomain>.workers.dev/mcp"
+ALPACA_MCP_URL="https://alpaca-mcp.<your-subdomain>.workers.dev/mcp"
+
+# Bearer tokens for those servers.
+TASTYTRADE_MCP_TOKEN="<the MCP_AUTH_TOKEN secret set on your tastytrade MCP worker>"
+ALPACA_MCP_TOKEN=""

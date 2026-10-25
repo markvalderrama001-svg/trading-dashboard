@@ -1,0 +1,36 @@
+{
+  "name": "trading-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Read-only options-book dashboard over MCP servers. A server-side allowlist means the dashboard can never place an order. Ships with a synthetic demo mode.",
+  "type": "module",
+  "author": "Mark Valderrama",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markvalderrama001-svg/trading-dashboard.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "demo": "vite --mode demo",
+    "build": "tsc && vite build",
+    "build:demo": "tsc && vite build --mode demo --base ./ --outDir dist-demo",
+    "preview": "vite preview",
+    "pages:dev": "wrangler pages dev -- npm run dev",
+    "pages:deploy": "npm run build && wrangler pages deploy dist",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261019.1",
+    "typescript": "^5.6.3",
+    "vite": "^7.3.7",
+    "vitest": "^4.1.12",
+    "wrangler": "^4.0.0"
+  },
+  "overrides": {
+    "undici": "^7.30.1"
+  }
+}
